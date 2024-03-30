@@ -23,6 +23,6 @@ application = Application([CreditService],
 if __name__ == '__main__':
     from wsgiref.simple_server import make_server
 
-    server = make_server('127.0.0.1', 8000, WsgiApplication(application))
+    server = make_server('0.0.0.0', 8000, WsgiApplication(application))
     print("SOAP server starting on http://127.0.0.1:8000")
     server.serve_forever()
